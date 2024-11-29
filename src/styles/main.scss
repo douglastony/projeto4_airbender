@@ -1,0 +1,66 @@
+@use 'variaveis';
+@use 'mixins';
+@use 'hero';
+@use 'about';
+
+@font-face {
+    font-family: Avatar;
+    src: url(../../assets/fonts/Avatar_Airbender.ttf);
+    font-weight: 400;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: variaveis.$corDeFundo; 
+}
+
+.avatar-text{
+    font-family: Avatar, sans-serif;
+}
+
+body{
+    max-width: 93vw;
+    margin: 0 auto;
+}
+
+
+.text--big{
+    @include mixins.text(18px);
+}
+
+.text{
+    @include mixins.text;
+
+}
+
+.text--small{
+    @include mixins.text(12px);
+}
+
+.link-text{
+    @extend .text--big;
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
+
+
+.title--big{
+    @include mixins.title(44px); 
+}
+
+.title{
+    @include mixins.title; 
+}
+
+.title--small{
+    @include mixins.title(28px); 
+}
+
+button{
+    a{
+        text-decoration: none
+    }
+}
+
