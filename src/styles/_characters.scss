@@ -45,6 +45,7 @@
                     max-width: calc(25vw - 160px);
                     cursor: pointer;
                     transition: transform 0.5s, opacity 0.5s;
+                    border-radius: 4px;
 
                     @media (max-width: 768px) {
                         max-width: calc(50% - 8px) ;
