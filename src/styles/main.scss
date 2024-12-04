@@ -2,6 +2,10 @@
 @use 'mixins';
 @use 'hero';
 @use 'about';
+@use 'characters';
+@use 'trailers';
+@use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avatar;
@@ -13,6 +17,7 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    list-style: none;
     background-color: variaveis.$corDeFundo; 
 }
 
@@ -23,6 +28,12 @@
 body{
     max-width: 93vw;
     margin: 0 auto;
+
+    @media (max-width: 768px){
+        max-width: 100% ;
+        display: flex;  
+        flex-direction: column;
+    }
 }
 
 
@@ -58,9 +69,18 @@ body{
     @include mixins.title(28px); 
 }
 
-button{
-    a{
-        text-decoration: none
+.button{
+    @include mixins.btn;
+    text-decoration: none;
+    padding: 8px 14px;
+
+    &:hover{
+        transform: scale(1.05);;
+        background-color: lighten(variaveis.$corDeFundoDoButao, 10%)
+    }
+
+    li{
+        text-decoration: none;
     }
 }
 

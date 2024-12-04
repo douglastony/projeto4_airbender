@@ -7,36 +7,65 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
+    <header class="header">
+        <header class="header__content">
+            <h1>
+                <img class="header__logo" src="src/images/hero/logo.png" alt="The Last Aibender - Logo">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item button"><a href="https://www.netflix.com/watch/70116067"></a>Animação</li>
+                <li class="header__links__item button"><a href="https://www.netflix.com/watch/80238401"></a>Live-action</li>
+            </ul>
+        </header>
+    </header>
     <section class="hero">
         <div class="hero__content">
-            <h1>
-                <img src="src/images/hero/logo.png" alt="">
-            </h1>
+            <div class="image">
+                <img src="src/images/hero/logo.png" alt="The Last Aibender - Logo">
+            </div>
             <h3 class="title--small avatar-text"> As aventuras de Aang</h3>
             <p class="text">Você é fã?</p>
             <a href="" class="link-text link-none">Inscreva-se na nossa newsletter!</a>
             <h3 class="text--big">Assista na Netflix as melhores versões</h3>
             <ul class="hero__content__list">
                 <li class="hero__content__list__item">
-                        <a class="button" href="https://www.netflix.com/watch/80238401?trackId=255824129" alt="The last Airbender - Animação">Animação</a>
+                        <a class="button" href="https://www.netflix.com/watch/70116067" alt="The last Airbender - Animação">Animação</a>
                 </li>
                 <li class="hero__content__list__item">
-                        <a  class="button" href="https://www.netflix.com/watch/70116067?trackId=255824129" alt="The last Airbender - Live-action">Live-action</a>
+                        <a  class="button" href="https://www.netflix.com/watch/80238401" alt="The last Airbender - Live-action">Live-action</a>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="about">
-        <div class="about__content">
-            <ul class="about__content__list">
-                <li class="about__content__list__item avatar-text">
-                    <a class="link-text title" href="">Enredo</a>
+    <section class="trailer">
+        <h3 class="trailer__title title--big avatar-text">Trailers</h3>
+        <div class="trailer__content">
+            <nav class="trailer__content__nav">
+                <button data-tab-button="animacao2005" class="trailer__content__nav__button avatar-text title trailer__content__nav__button--is-active">Nickelodeon - 2005</button>
+                <button data-tab-button="liveaction2010" class="trailer__content__nav__button avatar-text title">Live-action - 2010</button>
+                <button data-tab-button="liveaction2024" class="trailer__content__nav__button avatar-text title"> Live-action - 2024</button>
+            </nav>
+            <ul class="trailer__content__list">
+                <li data-tab-id="animacao2005" class="trailer__content__list__each">
+                    <iframe width="700" height="393,75" rel=0 src="https://www.youtube.com/embed/ooVvH2IYz0w?si=m_YAL9MYSzyZfPL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </li>
-                <li class="about__content__list__item avatar-text">
-                    <a class="link-text title" href="">Variantes</a>
+                <li data-tab-id="liveaction2010" hidden class="trailer__content__list__each">
+                    <iframe width="700" height="393,75" src="https://www.youtube.com/embed/WdoiHMCVqMQ?si=Zdzg5JV0rbK5nA6b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </li>
+                <li data-tab-id="liveaction2024" hidden class="trailer__content__list__each">
+                    <iframe width="700" height="393,75" src="https://www.youtube.com/embed/ByAn8DF8Ykk?si=_7SnPPXN8yEdjzfj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </li>
             </ul>
-            <p class="about__content__text text--big"> Em um mundo dividido em quatro grandes nações – Tribo da Água, Reino da Terra, Nação do Fogo e Nômades do Ar –, algumas pessoas possuem a habilidade especial de dobrar os elementos. O equilíbrio entre essas nações é garantido pelo Avatar, um ser que reencarna em ciclos e tem a capacidade única de dominar todos os quatro elementos. No entanto, após o desaparecimento do Avatar por cem anos, a Nação do Fogo inicia uma guerra devastadora para conquistar o mundo. A história começa quando Aang, o último dobrador de ar e o Avatar há muito perdido, é encontrado congelado em um iceberg por Katara e Sokka, dois irmãos da Tribo da Água do Sul. Ainda apenas um garoto, Aang precisa aceitar sua responsabilidade como Avatar e embarcar em uma jornada épica para aprender a dominar todos os elementos. Com a ajuda de Katara, uma dobradora de água em treinamento, e Sokka, um estrategista habilidoso, Aang enfrenta desafios perigosos enquanto tenta derrotar o Senhor do Fogo Ozai e restaurar a paz ao mundo.
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about__content">
+            <nav class="about__content__nav">
+                <button data-tab-button="enredo" class="about__content__nav__button about__content__nav__button--is-active avatar-text title--big">Enredo</button>
+                <button data-tab-button="formatos" class="about__content__nav__button avatar-text title--big">Formatos</button>
+            </nav>
+            <p data-tab-id="enredo" class="about__content__text about__content__text--is-active text--big"> Em um mundo dividido em quatro grandes nações – Tribo da Água, Reino da Terra, Nação do Fogo e Nômades do Ar –, algumas pessoas possuem a habilidade especial de dobrar os elementos. O equilíbrio entre essas nações é garantido pelo Avatar, um ser que reencarna em ciclos e tem a capacidade única de dominar todos os quatro elementos. No entanto, após o desaparecimento do Avatar por cem anos, a Nação do Fogo inicia uma guerra devastadora para conquistar o mundo. A história começa quando Aang, o último dobrador de ar e o Avatar há muito perdido, é encontrado congelado em um iceberg por Katara e Sokka, dois irmãos da Tribo da Água do Sul. Ainda apenas um garoto, Aang precisa aceitar sua responsabilidade como Avatar e embarcar em uma jornada épica para aprender a dominar todos os elementos. Com a ajuda de Katara, uma dobradora de água em treinamento, e Sokka, um estrategista habilidoso, Aang enfrenta desafios perigosos enquanto tenta derrotar o Senhor do Fogo Ozai e restaurar a paz ao mundo.
 
                 Aang, que fugiu de sua responsabilidade como Avatar há 100 anos, agora precisa entender o peso de sua missão. Durante sua jornada, ele encontra novos amigos, como Toph, uma jovem cega e mestre na dobra de terra, que ajuda Aang a aprender a controlar a terra. Enquanto isso, Zuko, príncipe exilado da Nação do Fogo, caça o Avatar para restaurar sua honra e a de sua família, mas, com o tempo, começa a questionar seus próprios objetivos.
                 
@@ -44,14 +73,62 @@
                 
                 Aos poucos, Aang vai entendendo o que significa ser o Avatar e as responsabilidades que isso envolve, principalmente ao chegar ao último elemento: o fogo. Com a ajuda de Iroh, ele aprende que o fogo não é apenas destruição, mas também vida e criação. Entretanto, Aang também enfrenta o dilema de ser pacifista, o que o impede de derrotar diretamente Ozai, o líder da Nação do Fogo, que continua a buscar a dominação do mundo.
                 
-                No final, após muitas batalhas, traições e momentos de autodescoberta, Aang enfrenta Ozai na Batalha Final. Para derrotá-lo, Aang utiliza a poderosa habilidade do Avatar de controlar todos os elementos ao mesmo tempo, mas opta por uma solução que preserva a vida e restaura o equilíbrio entre as nações. A paz é finalmente restaurada, e Aang, agora plenamente consciente de sua função como Avatar, trabalha para unir as quatro nações e garantir um futuro harmonioso para todos.</p>
-            <p class="about__content__text text--big">A animação Avatar: A Lenda de Aang, criada por Michael Dante DiMartino e Bryan Konietzko, foi lançada pela Nickelodeon em 21 de fevereiro de 2005 e rapidamente se tornou uma das mais aclamadas séries animadas de todos os tempos. A história acompanha Aang, o último dobrador de ar e o Avatar, que tem a missão de restaurar o equilíbrio entre as quatro nações do mundo: a Tribo da Água, o Reino da Terra, a Nação do Fogo e os Nômades do Ar. Aang, após desaparecer por cem anos, acorda para um mundo em guerra, com a Nação do Fogo tentando conquistar os outros povos. Ao longo de três temporadas e 61 episódios, a série se destaca pela sua rica construção de mundo, temas profundos como responsabilidade, amizade e sacrifício, além de personagens complexos e memoráveis. Avatar: A Lenda de Aang é amplamente considerada uma das melhores animações da história, com uma base de fãs fiel e sendo constantemente elogiada por sua narrativa envolvente e abordagem madura.
+                No final, após muitas batalhas, traições e momentos de autodescoberta, Aang enfrenta Ozai na Batalha Final. Para derrotá-lo, Aang utiliza a poderosa habilidade do Avatar de controlar todos os elementos ao mesmo tempo, mas opta por uma solução que preserva a vida e restaura o equilíbrio entre as nações. A paz é finalmente restaurada, e Aang, agora plenamente consciente de sua função como Avatar, trabalha para unir as quatro nações e garantir um futuro harmonioso para todos.
+            </p>
+            <p data-tab-id="formatos" hidden class="about__content__text text--big">A animação Avatar: A Lenda de Aang, criada por Michael Dante DiMartino e Bryan Konietzko e lançada pela Nickelodeon em 2005, é amplamente reconhecida como uma das melhores séries animadas já feitas. Com três temporadas e 61 episódios, a série impressionou pela qualidade de sua narrativa, o detalhamento do universo construído e a profundidade dos temas abordados, características que elevaram seu status a um marco na animação moderna. Um dos fatores mais elogiados foi o equilíbrio entre humor, drama e lições de vida, tornando-a acessível a públicos de todas as idades.
 
-                Em 2010, o diretor M. Night Shyamalan tentou adaptar a animação para os cinemas com o live-action The Last Airbender, que abordava a história da primeira temporada da série. O filme, que conta com Noah Ringer no papel de Aang e Dev Patel como Zuko, enfrentou duras críticas de fãs e críticos. O principal motivo das críticas foi a falta de fidelidade à animação, com mudanças significativas nos personagens, no roteiro e na abordagem visual. Além disso, a direção e as atuações foram apontadas como um dos pontos fracos da produção. Apesar de arrecadar $319 milhões nas bilheteiras, o filme é amplamente lembrado como um dos piores live-actions já feitos, deixando uma grande parte dos fãs desapontados.
+                No entanto, a adaptação do desenho para o formato live-action nem sempre foi bem-sucedida. Em 2010, o diretor M. Night Shyamalan lançou The Last Airbender, um filme que buscava traduzir a primeira temporada da série animada para as telas de cinema. A produção, apesar de contar com um orçamento significativo e alcançar resultados expressivos em bilheterias, enfrentou críticas contundentes. Os fãs reprovaram a abordagem da história, com mudanças perceptíveis no tom, na caracterização dos personagens e até na pronúncia dos nomes. Além disso, o filme foi criticado por decisões de elenco que não refletiam a diversidade étnica presente na animação e pela falta de fidelidade à essência dos personagens e do mundo original.
                 
-                No entanto, em 2024, a Netflix lançou sua própria versão live-action de Avatar: A Lenda de Aang, intitulada Avatar: A Lenda de Aang, com grande sucesso tanto de público quanto de crítica. A série foi muito mais fiel ao material original, com uma adaptação cuidadosa e respeitosa dos personagens e da história. Gordon Cormier foi escalado como Aang, enquanto Daniel Dae Kim interpretou Ozai, o vilão central. A série seguiu de perto os eventos do primeiro livro da animação, mantendo os elementos que fizeram a série animada tão especial. A adaptação conseguiu capturar a magia e a profundidade da história original, agradando tanto os fãs antigos quanto novos. Após o sucesso do lançamento, a Netflix anunciou que a série foi renovada para uma segunda e terceira temporada, prometendo cobrir os eventos dos próximos livros e continuar a jornada épica de Aang, Katara, Sokka e seus amigos.</p>text 
+                Após o fracasso dessa tentativa inicial, a Netflix assumiu o desafio de criar uma nova versão live-action da série em 2024, intitulada Avatar: A Lenda de Aang. Diferente do filme de Shyamalan, a produção da Netflix foi amplamente elogiada por sua abordagem cuidadosa e respeitosa. Um ponto de destaque foi a escalação de atores que respeitavam as características culturais das nações representadas na animação. A adaptação manteve o enredo central fiel ao material original, embora tenha ajustado detalhes para um formato mais denso e cinematográfico. As diferenças foram notadas principalmente no ritmo, com mais tempo dedicado ao desenvolvimento dos personagens e à construção de cenas importantes, algo que não foi possível no filme de 2010.
+                
+                Enquanto a animação é celebrada pela fluidez e liberdade de sua arte, com batalhas e cenários que exploram o potencial visual da dobragem dos elementos, o live-action da Netflix encontrou maneiras criativas de adaptar esses aspectos ao mundo real. A tecnologia moderna de efeitos visuais foi fundamental para criar cenas de ação impressionantes e capturar a grandiosidade do universo de Avatar.
+                
+                Após o sucesso da primeira temporada do live-action, a Netflix anunciou a renovação da série para cobrir os próximos livros da animação, prometendo uma exploração ainda mais detalhada do mundo e dos personagens. Embora nenhuma adaptação consiga reproduzir integralmente o impacto cultural e emocional de um original tão icônico, a série da Netflix foi vista como um passo significativo na direção certa, resgatando a confiança dos fãs e introduzindo o mundo de Avatar a uma nova geração.
+            </p> 
         </div>
     </section>
+    <section class="characters">
+        <div class="characters__content">
+            <h2 class="characters__content__title avatar-text title--big">Personagens</h2>
+            <ul class="characters__content__list">
+                <li class="characters__content__list__each">
+                    <img src="./src/images/personagens/katara.png" alt="Katara">
+                    <p>
+                        Katara é uma habilidosa dobradora de água da Tribo da Água do Sul. Ela é uma jovem corajosa e compassiva que, após encontrar Aang, se torna uma de suas maiores aliadas. Katara tem um forte senso de justiça e acredita que a paz no mundo só será restaurada se todos os elementos forem equilibrados. Além de ser uma dobradora de água talentosa, ela também assume o papel de figura materna para Aang, guiando-o em sua jornada. A atriz Kiawentiio Tarbell a interpreta na série live-action da Netflix.
+                    </p>
+                </li>
+                <li class="characters__content__list__each">
+                    <img src="./src/images/personagens/Aang.png" alt="Aang">
+                    <p>
+                        Aang é o último dobrador de ar e o Avatar que deve restaurar o equilíbrio do mundo. Ele foi congelado em um iceberg por 100 anos, durante os quais a Nação do Fogo iniciou uma guerra para dominar as outras nações. Ao ser libertado, Aang descobre que é o Avatar, mas ainda está imaturo e fugindo das responsabilidades que isso implica. Sua jornada envolve aprender a dominar os outros três elementos e derrotar a Nação do Fogo, além de lidar com o peso de ser o único que pode salvar o mundo. Aang é carismático, espirituoso e, embora seja jovem, carrega a sabedoria e o poder do Avatar. Ele é interpretado por Gordon Cormier na série live-action da Netflix.
+                    </p>
+                </li>
+                <li class="characters__content__list__each">
+                    <img src="./src/images/personagens/Zuko.png" alt="Zuko">
+                    <p>
+                        Zuko é o príncipe exilado da Nação do Fogo, em busca de capturar Aang para recuperar sua honra e o favor de seu pai, o Senhor do Fogo Ozai. Inicialmente, Zuko é um antagonista, com uma jornada marcada pela raiva e pelo desejo de aprovação de seu pai. No entanto, ao longo da série, ele começa a questionar suas crenças e se alia a Aang, buscando um caminho para redimir-se. Zuko é um dos personagens mais complexos, e sua luta interna entre o bem e o mal é um dos maiores focos da narrativa. O ator Dallas Liu interpreta Zuko na versão live-action da Netflix.
+                    </p>
+                </li>
+                <li class="characters__content__list__each">
+                    <img src="./src/images/personagens/Sokka.png" alt="Sokka">
+                    <p>
+                        Sokka é irmão mais velho de Katara e, embora não tenha habilidades de dobrador, é um estrategista habilidoso e valente guerreiro. Ele é conhecido por seu humor sarcástico e pela lealdade inabalável à sua família e amigos. Ao longo da série, Sokka amadurece, tornando-se um líder respeitado e contribuindo de maneira crucial na luta contra a Nação do Fogo, mesmo sem poderosos poderes de dobrador. Ele é interpretado por Ian Ousley na série live-action da Netflix.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__content">
+            <p class="footer__text text">
+                Este site é um projeto acadêmico desenvolvido para fins de estudo e não possui nenhuma afiliação oficial com a Nickelodeon, Avatar: The Last Airbender, ou suas propriedades relacionadas. Todos os direitos sobre os personagens, logotipos e conteúdos pertencem aos seus respectivos proprietários. Nenhum conteúdo aqui apresentado visa fins comerciais.
+            </p>
+            <p class="footer__text text">
+                © 2024 - Desenvolvido por Douglas Tony. Código disponível no <a href="https://github.com/douglastony" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            </p>
+        </div>
+    </footer>
 
+    <script src="./src/scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+@use 'mixins';
+@use 'variaveis';
+
+.header{
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 1000;
+    margin-top: 18px;
+    display: none;
+    background-color: transparentize($color: variaveis.$corDeFundo, $amount: .2);
+    transition: all 0.3s ease;
+
+    &__content{
+        padding: 8px 36px 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: transparent;
+        margin-bottom: -100px;
+    }
+    
+    &__logo{
+        max-width: 96px;
+        width: 100%;
+        background-color: transparent;
+    }
+    
+    &__links{
+        display: flex;
+        background-color: transparent;
+        
+        .button{
+            @include mixins.btn;
+            width: 145px;
+            
+        }
+        
+        &__item{
+            margin-left: 16px ;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: transparent;
+        }
+    }
+
+    &--is-visible{
+        display: block;
+    }
+}

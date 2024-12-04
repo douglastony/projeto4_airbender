@@ -25,17 +25,37 @@
         pointer-events: none; /* Impede interação com o pseudo-elemento */
     }
 
+    @media (max-width: 768px) {
+        padding-top: 0;
+        background-image: url(../../src/images/hero/background_media.jpg);
+        height: 200%;
+    }
+
 
     &__content{
         max-width: 640px;
         background-color: transparent;
-    
-        background-color: transparent;
+
+        @media (max-width:768px) {
+            display: flex; /* Usando flexbox para o layout */
+            flex-direction: column; /* Organiza os itens em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente */
+            justify-content: center; /* Centraliza os itens verticalmente */
+            position: absolute;
+            margin: 30% 10%;
+            padding: 0 20px; /* Adiciona algum espaçamento lateral */
+            
+        }
         
-        h1{
+        .image{
             margin-top: 15%;
             margin-bottom: -10px;
             background-color: transparent;
+
+            @media (max-width:768px) {
+                background-color: transparentize($color: variaveis.$corDeFundo, $amount: .5);
+                
+            }
         }
 
         h3{
@@ -63,23 +83,20 @@
         width: 100%;
         background-color: transparent;
 
+        @media(max-width: 768px) {
+            display: flex; 
+            width: 100%;
+        }
+
             &__item{
                 width: calc(50% - 48px);
-                
-                .button{
-                    @include mixins.btn;
-                    
-                    &:hover{
-                        transform: scale(1.05);;
-                        background-color: lighten(variaveis.$corDeFundoDoButao, 10%)
-                    }
-                    
-                }
+
             }
         }
     }
+    
     &__background{
         background-image: url('../images/hero/background_hero.jpeg')
     }
-    
+
 }

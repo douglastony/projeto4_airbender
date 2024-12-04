@@ -1,11 +1,72 @@
+@use 'variaveis';
+
 .about{
-    background-color: transparent;
+    position: relative;
     background-image: url(../../src/images/about/background_about.png);
-    background-size: 100% 100%;
+    background-size: 80%;
     background-repeat: no-repeat;
+    background-position: center top;
+    transition: height 0.3s ease;
+    background-position: center 2vw;
+    
+    @media (max-width: 768p) {
+        background-position: center top;
+        background-repeat: repeat;
+        background-size: auto; 
+        height: auto; 
+        min-height: 200vh;
+    }
+
 
     &__content{
         text-align: center;
+        background-color: rgba(0,0,0, .8);
+        padding-bottom: 3vw;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            min-height: 200vh;
+        }
+
+        &__nav{
+            display: flex;
+            width: 30%;
+            justify-content: space-between;
+            margin: 48px auto;
+            background-color: transparent;
+            
+            @media (max-width: 768px) {
+                width: 50%;
+            }
+
+
+            &__button{
+                text-align: center;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                border-bottom: 5px solid transparent;
+                transition: all .3s ease;
+
+                &--is-active{
+                    border-color: variaveis.$corTextoSecundario;
+                    transition: all .3s ease;
+                }
+            }
+        }
+        
+        &__text{
+            text-align: justify;
+            background-color: transparent;
+            margin: 80px auto;
+            transition: all .5s ease;
+            width: 70%;
+            margin: 0 auto;
+            height: 630px;
+
+        }
+
         &__list{
             list-style: none;
             display: flex;
@@ -15,11 +76,6 @@
             &__item{
                 padding: 0 24px;
             }
-        }
-
-        &__text{
-            width: 90%;
-            margin: 0 auto;
         }
     }
 }

@@ -1,0 +1,28 @@
+@use 'variaveis';
+
+
+footer{
+    background-color: variaveis.$corDoFooter;
+    .footer{
+        
+        &__content{
+            text-align: center;
+            margin:5vw auto 1vw;
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: transparent;
+
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+        
+        &__text{
+            background-color: transparent;
+            margin: 6px auto 10px;
+            
+        }
+    }
+}
