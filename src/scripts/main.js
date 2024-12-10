@@ -5,14 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const characters = document.querySelectorAll('.characters__content__list__each');
 
     const alturaHero = heroSection.clientHeight;
+    let previousScrollPosition = window.scrollY;
 
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
+        const currentScrollPosition = window.scrollY;
+        const scrollDifference = Math.abs(currentScrollPosition - previousScrollPosition);
         
         if (window.scrollY < 200 ) {
             header.classList.remove('header--is-visible');
         } else {
             header.classList.add('header--is-visible');
+        }
+
+        if (scrollDifference > 100) {
+            deactivateActiveItems();
+            previousScrollPosition = currentScrollPosition; // Atualiza a posição do scroll
         }
     })
 
@@ -90,5 +98,14 @@ function resetCharacters() {
     characters.forEach((char) => {
         char.classList.remove('characters__content__list__each--is-active');
         char.classList.remove('characters__content__list__each--is-inactive');
+    });
+}
+
+function deactivateActiveItems() {
+    const characters = document.querySelectorAll('.characters__content__list__each');
+    characters.forEach((char) => {
+        if (char.classList.contains('characters__content__list__each--is-active')) {
+            char.classList.remove('characters__content__list__each--is-active');
+        }
     });
 }

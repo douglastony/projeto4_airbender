@@ -6,9 +6,15 @@
     min-height: 90vh;
     text-align: center;
     background-image: url(../../src/images/hero/background_hero.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 64px;
+
+    @media (max-width:500px) {
+        margin-top: -100px;
+        
+    }
 
     &::after{
         content: '';
@@ -31,6 +37,12 @@
         height: 200%;
     }
 
+    @media (max-width:500px) {
+        padding-top: 45%;
+        background-image: url(../../src/images/hero/background_small.jpg);
+
+    }
+
 
     &__content{
         max-width: 640px;
@@ -44,7 +56,12 @@
             position: absolute;
             margin: 30% 10%;
             padding: 0 20px; /* Adiciona algum espaçamento lateral */
-            
+        }
+
+        
+        
+        @media (max-width:400px){
+            margin: 40% auto;
         }
         
         .image{
@@ -88,8 +105,15 @@
             width: 100%;
         }
 
+        @media (max-width:500px){}
+
             &__item{
                 width: calc(50% - 48px);
+
+                @media (max-width:500px){
+                    width: calc(50% - 12px);
+                    font-size: .8rem;
+                }
 
             }
         }

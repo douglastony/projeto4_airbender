@@ -37,8 +37,15 @@
             }
             &__each{
                 iframe{
-                    width: 614px; /* Ajusta a largura do iframe para 100% da largura disponível */
-                    height: 345px; /* Ajuste a altura do iframe conforme necessário */
+                    width: 40vw; /* Ajusta a largura do iframe para 100% da largura disponível */
+                    height: 23vw; /* Ajuste a altura do iframe conforme necessário */
+
+                    @media (max-width:768px){
+                        margin: 18px auto;
+                        width: 60vw; /* Ajusta a largura do iframe para 100% da largura disponível */
+                        height: 35vw; /* Ajuste a altura do iframe conforme necessário */
+
+                    }
                 }
             }
         }
